@@ -13,7 +13,6 @@ private:
 	string PlayerName; // What do you want the player to be called?
 	char PlayerGender; // Gender of the player.
 
-
 };
 
 // ---------- ITEM CLASS ---------
@@ -36,7 +35,7 @@ private:
 class Room
 {
 private:
-	Item items[4]; // an array of interactable "pick-up" items in a room
+	Item items; // an array of interactable "pick-up" items in a room
 
 };
 
@@ -45,23 +44,22 @@ private:
 // They are meant to "be in the way" after all...
 // How does the obstacle get in the way? (methods)
 // The player may need an item from a Room
+/* Deprecated class - no use at the moment
 class Obstacle
 {
 private:
 	string ObstacleName;
 };
+*/
 
-// ---------- TIMER CLASS ---------
+// ---------- TIMER FUNCTION ---------
 // What is the current time the player is at? (attributes)
 // How does the timer interact with the player? (methods)
 // for example, is it gameover after a certain time?
 // Are certain penalties imposed if a time threshold is not met?
-class Timer
+function Timer()
 {
-private:
-	double numericTimer; // threshold in seconds for timing the player progress
-	string displayTimer; // displays a visual representation to show the user
-};
+}
 
 
 // ---------- MAIN PROGRAM STARTS HERE------
