@@ -1,14 +1,14 @@
-#include <iostream>
-#include <string>
+#pragma once
 
-// pragma once
 // Player Class for Project, "Don't Be Late"
 
 // ************ Item Key ***********
 /*
 	k = car keys		
 	c = coffee beans	
-	s = clothes			
+	s = clothes	
+	p = phone
+	w = wallet
 */
 // *********************************
 
