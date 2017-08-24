@@ -38,6 +38,6 @@ Player(string Name, char Gender)
 	PlayerName = Name;
 	PlayerGender = Gender;
 	PlayerLocation = 1;
-	Inventory = {"", "", "", "", "", "", "", "", "", ""}
+	Inventory = { "", "", "", "", "", "", "", "", "", "" };
 }
 // End Player Class and Construct
