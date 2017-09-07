@@ -1,3 +1,9 @@
+#include <iostream>
+#include <vector>
+#include <string>
+
+using namespace std;
+
 #pragma once
 
 // Player Class for Project, "Don't Be Late"
@@ -25,8 +31,22 @@
 class Room
 {
 public:
-	char ItemInRoom;
-	bool Occupied;
-	vector ConnectedRooms[];
+	string roomName;
+	char itemInRoom;
+	bool occupied;
+	string connectedRooms;
+
+	//Contructor
+	Room(string name, char item, string rooms)
+	{
+		roomName = name;
+		itemInRoom = item;
+		connectedRooms = rooms;
+		occupied = 0;
+	}
+	void optionSelect()
+	{
+		cout << "1. " << connectedRooms[0];
+	}
 };
 // End Room class and construct

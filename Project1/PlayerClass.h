@@ -1,3 +1,7 @@
+#include <iostream>
+
+using namespace std;
+
 #pragma once
 
 // Player Class for Project, "Don't Be Late"
@@ -27,17 +31,25 @@
 class Player
 {
 public:
-	string PlayerName; // What do you want the player to be called?
-	char PlayerGender; // Gender of the player; "M" for male, "F" for female
-	int PlayerLocation; // Where is the player in the house? (See Location key)
-	char Inventory[10]; // See item key
+	string playerName; // What do you want the player to be called?
+	char playerGender; // Gender of the player; "M" for male, "F" for female
+	char inventory[10]; // See item key
+	int timer;
+	Player(string name, char gender)
+	{
+		playerName = name;
+		playerGender = gender;
+		timer = 0;
+		for (int i = 0; i < 10; i++)
+			inventory[i] = 'x';
+	}
+	void increaseTimer(int timeWasted)
+	{
+		timer += timeWasted;
+	}
+	int returnTime()
+	{
+		return timer;
+	}
 };
-
-Player(string Name, char Gender)
-{
-	PlayerName = Name;
-	PlayerGender = Gender;
-	PlayerLocation = 1;
-	Inventory = { "", "", "", "", "", "", "", "", "", "" };
-}
 // End Player Class and Construct
