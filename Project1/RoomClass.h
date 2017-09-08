@@ -32,21 +32,24 @@ class Room
 {
 public:
 	string roomName;
-	char itemInRoom;
+	char item;
 	bool occupied;
-	string connectedRooms;
+	string *connectedRooms[];
 
 	//Contructor
-	Room(string name, char item, string rooms)
+	Room(string name, char itm, string *rooms[], int numRooms) :item(itm)
 	{
-		roomName = name;
-		itemInRoom = item;
-		connectedRooms = rooms;
+		//item = itm;
+		for (int i = 0; i < numRooms - 1; i++)
+		{
+
+		}
+		connectedRooms[] = rooms[];
 		occupied = 0;
 	}
 	void optionSelect()
 	{
-		cout << "1. " << connectedRooms[0];
+		cout << "1. " << connectedRooms[0] << endl;
 	}
 };
 // End Room class and construct
