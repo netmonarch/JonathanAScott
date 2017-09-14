@@ -26,17 +26,17 @@ int main()
 {	
 	//Moves and resizes console window
 	HWND wh = GetConsoleWindow();
-	MoveWindow(wh, 0, 0, 800, 500, true);
+	MoveWindow(wh, 0, 0, 800, 600, true);
 
 	//ASCII Items
 	const string key[6] =
 	{
-		"   ____   ",
-		"  /    \\  ",
-		"  \\    /  ",
-		"   |  |   ",
-		" #_|  |   ",
-		" #____/   "
+		"     ____    ",
+		"    /    \\   ",
+		"    \\    /   ",
+		"     |  |    ",
+		"   #_|  |    ",
+		"   #____/    "
 	};
 	//Rooms
 	string roomList[9] = { "", "Bedroom", "Bathroom", "Exerise Room", "Hallway", "Living Room", "Downstairs Bathroom", "Kitchen", "Garage"};
@@ -54,13 +54,13 @@ int main()
 
 	//Creates Rooms
 	Room Bedroom( roomList[1], 's', bdroom);
-	Room Bedroom(roomList[2], NULL, upBR);
-	Room Bedroom(roomList[3], NULL, exRoom);
-	Room Bedroom(roomList[4], NULL, upHall);
-	Room Bedroom(roomList[5], 's', lvRoom);
-	Room Bedroom(roomList[6], 's', downBR);
-	Room Bedroom(roomList[7], 's', kitchen);
-	Room Bedroom(roomList[8], 's', garage);
+	Room Bedrooms(roomList[2], NULL, upBR);
+	Room Bedroomf(roomList[3], NULL, exRoom);
+	Room Bedroomg(roomList[4], NULL, upHall);
+	Room Bedroomh(roomList[5], 's', lvRoom);
+	Room Bedroomj(roomList[6], 's', downBR);
+	Room Bedroomk(roomList[7], 's', kitchen);
+	Room Bedrooml(roomList[8], 's', garage);
 
 
 
@@ -73,19 +73,83 @@ int main()
 	Player player1(pName);
 	player1.inventory[0] = 'k';
 
-	//Main Game Loop
+	// Main Game Loop
 	do {
-		//Prints Display
+		system("cls");
+		// Prints Display
 		switch (player1.floor)
 		{
 		case 1:
-			//First Floor
+			// First Floor
+			cout << " *****************************************************************************" << endl;//Output Line 1
+			cout << " *      Items      |                         Floor 2                         *" << endl;
+			cout << " *                 |                              __________________________ *" << endl;
+			cout << " *                 |                              |                         |*" << endl;
+			cout << " *                 |                              ||         Garage         |*" << endl;
+			cout << " *                 |                               |                        |*" << endl;
+			cout << " *                 |                               |                        |*" << endl;
+			cout << " *                 |                               |                        |*" << endl;
+			cout << " *                 |                              ||                        |*" << endl;
+			cout << " *                 |  ____________________________|___| |___________________|*" << endl;
+			cout << " *                 | |\\    |  |  |  |  |  |     /|                          |*" << endl;
+			cout << " *                 | |  \\  |  |  |  |  |  |   /  |                          |*" << endl;
+			cout << " *                 | |___ \\|__|__|__|__|__  /    |        Kitchen           |*" << endl;
+			cout << " *                 | |     |              |______|                          |*" << endl;
+			cout << " *                 | |_____|              |      |                          |*" << endl;
+			cout << " *                 | |     |              |______|                          |*" << endl;
+			cout << " *                 | |_____|              |   ^  |                          |*" << endl;
+			cout << " *                 | |  |                     |                             |*" << endl;
+			cout << " *                 | |  v                                                   |*" << endl;
+			cout << " *                 | |                                                      |*" << endl;
+			cout << " *                 | |                                                      |*" << endl;
+			cout << " *                 | |                                       ________   ____|*" << endl;
+			cout << " *                 | |                                      |        | |    |*" << endl;
+			cout << " *                 | |       Living Room                    | Bathroom      |*" << endl;
+			cout << " *                 | |                                      |               |*" << endl;
+			cout << " *                 | |                                      |               |*" << endl;
+			cout << " *                 | |                                      |               |*" << endl;
+			cout << " *                 | |______________________________________|_______________|*" << endl;
+			cout << " *                 |                                                         *" << endl;
+			cout << " *                 |                                                         *" << endl;
+			cout << " *                 |                                                         *" << endl;
+			cout << " *                 |                                                         *" << endl;
+			cout << " *****************************************************************************" << endl;
 			break;
 		case 2:
-			//Second Floor
-			cout << "***********";//Output Line 1
-			cout << "***********" << endl;
-			cout << "           " << endl;
+			// Second Floor
+			cout << " *****************************************************************************" << endl;//Output Line 1
+			cout << " *      Items      |                         Floor 2                         *" << endl;
+			cout << " *  =============  |  ______________________________________________________ *" << endl;
+			cout << " *                 | |\\    |  |  |  |     /     |                           |*" << endl;
+			cout << " *                 | |  \\  |  |  |  |   /  |    |           Weight          |*" << endl;
+			cout << " *                 | |___ \\|__|__|__|_/    |    |             Room          |*" << endl;
+			cout << " *                 | |     |         |_____|    |                           |*" << endl;
+			cout << " *                 | |_____|         |     |    |                           |*" << endl;
+			cout << " *                 | |     |         |_____|    |                           |*" << endl;
+			cout << " *                 | |_____|         |  |  |    |                           |*" << endl;
+			cout << " *                 | |     |            |       |                           |*" << endl;
+			cout << " *                 | |_____|            V       |_______|  |________________|*" << endl;
+			cout << " *                 | |  ^                                                   |*" << endl;
+			cout << " *                 | |  |                                                   |*" << endl;
+			cout << " *                 | |  |                    Hall                           |*" << endl;
+			cout << " *                 | |                                                      |*" << endl;
+			cout << " *                 | |                                                      |*" << endl;
+			cout << " *                 | |________________________   ___________________________|*" << endl;
+			cout << " *                 | |                        | |      |                    |*" << endl;
+			cout << " *                 | |                                 |                    |*" << endl;
+			cout << " *                 | |    Bedroom                      |      Bathroom      |*" << endl;
+			cout << " *                 | |                                 |                    |*" << endl;
+			cout << " *                 | |                                 |                    |*" << endl;
+			cout << " *                 | |                                 |                    |*" << endl;
+			cout << " *                 | |                                 |                    |*" << endl;
+			cout << " *                 | |                                 =                    |*" << endl;
+			cout << " *                 | |                                 =                    |*" << endl;
+			cout << " *                 | |_________________________________|____________________|*" << endl;
+			cout << " *                 |                                                         *" << endl;
+			cout << " *                 |                                                         *" << endl;
+			cout << " *                 |                                                         *" << endl;
+			cout << " *                 |                                                         *" << endl;
+			cout << " *****************************************************************************" << endl;
 			if (player1.inventory[0] == NULL)
 			{
 				cout << "            " << endl;
@@ -105,7 +169,7 @@ int main()
 		case 1:
 			break;
 		}
-	} while (player1.timer < 200);
+	} while (player1.timer < 0);
 	return 0;
 }
 
