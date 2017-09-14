@@ -37,7 +37,7 @@ class Player
 public:
 	string playerName; // What do you want the player to be called?
 	//char playerGender; // Gender of the player; "M" for male, "F" for female
-	char inventory[5]; // See item key
+	string inventory[5]; // See item key
 	int timer;
 	int playerPosition;
 	int floor;
@@ -48,7 +48,7 @@ public:
 		floor = 2;
 		playerPosition = 1;
 		for (int i = 0; i < 5; i++)
-			inventory[i] = NULL;
+			inventory[i] = "";
 	}
 	
 };
