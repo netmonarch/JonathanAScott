@@ -1,4 +1,3 @@
 ﻿  Main.cpp
-f:\classes\sdva203 a c++ programming ii\8-24-17\dontbelate\dontbelate\main.cpp(55): error C2664: 'Room::Room(Room &&)': cannot convert argument 1 from 'const std::string' to 'std::string &'
-  f:\classes\sdva203 a c++ programming ii\8-24-17\dontbelate\dontbelate\main.cpp(55): note: Conversion loses qualifiers
-f:\classes\sdva203 a c++ programming ii\8-24-17\dontbelate\dontbelate\main.cpp(97): error C2059: syntax error: '}'
+  DontBeLate.vcxproj -> E:\c++Proj\x64\Debug\DontBeLate.exe
+  DontBeLate.vcxproj -> E:\c++Proj\x64\Debug\DontBeLate.pdb (Partial PDB)
