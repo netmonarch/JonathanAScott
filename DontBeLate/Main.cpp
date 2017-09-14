@@ -53,14 +53,14 @@ int main()
 	vector<string> garage = { "Kitchen" };
 
 	//Creates Rooms
-	Room Bedroom( roomList[1], 's', bdroom);
-	Room Bedrooms(roomList[2], NULL, upBR);
-	Room Bedroomf(roomList[3], NULL, exRoom);
-	Room Bedroomg(roomList[4], NULL, upHall);
-	Room Bedroomh(roomList[5], 's', lvRoom);
-	Room Bedroomj(roomList[6], 's', downBR);
-	Room Bedroomk(roomList[7], 's', kitchen);
-	Room Bedrooml(roomList[8], 's', garage);
+	Room Bedroom(roomList[1], "", bdroom);
+	Room Bedrooms(roomList[2], "", upBR);
+	Room Bedroomf(roomList[3], "", exRoom);
+	Room Bedroomg(roomList[4], "", upHall);
+	Room Bedroomh(roomList[5], "", lvRoom);
+	Room Bedroomj(roomList[6], "", downBR);
+	Room Bedroomk(roomList[7], "", kitchen);
+	Room Bedrooml(roomList[8], "", garage);
 
 
 
@@ -150,14 +150,14 @@ int main()
 			cout << " *                 |                                                         *" << endl;
 			cout << " *                 |                                                         *" << endl;
 			cout << " *****************************************************************************" << endl;
-			if (player1.inventory[0] == NULL)
+			if (player1.inventory[0] == "")
 			{
 				cout << "            " << endl;
 			}
 			else
 			{
-				string item = itemCheck(player1.inventory[0]);
-				cout << item[0] << endl;
+				//string item = itemCheck(player1.inventory[0]);
+				//cout << item[0] << endl;
 			}
 			break;
 		}
