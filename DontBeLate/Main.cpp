@@ -39,20 +39,30 @@ int main()
 		" #____/   "
 	};
 	//Rooms
-	const string roomList[9] = { NULL, "Bedroom", "Bathroom", "Exerise Room", "Hallway", "Living Room", "Downstairs Bathroom", "Kitchen", "Garage"};
+	string roomList[9] = { "", "Bedroom", "Bathroom", "Exerise Room", "Hallway", "Living Room", "Downstairs Bathroom", "Kitchen", "Garage"};
+
 
 	//Declaring constant variables for connected rooms
-	const vector<string> bdroom = { "Bathroom", "Hallway" };
-	const vector<string> upHall = { "Exercise Room", "Downstairs", "Bedroom" };
-	const vector<string> upBR = { "Bedroom" };
-	const vector<string> exRoom = { "Hallway" };
-	const vector<string> lvRoom = { "Bathroom", "Kitchen", "Upstairs" };
-	const vector<string> downBR = { "Living Room" };
-	const vector<string> kitchen = { "Garage", "Living Room" };
-	const vector<string> garage = { "Kitchen" };
+	vector<string> bdroom = { "Bathroom", "Hallway" };
+	vector<string> upHall = { "Exercise Room", "Downstairs", "Bedroom" };
+	vector<string> upBR = { "Bedroom" };
+	vector<string> exRoom = { "Hallway" };
+	vector<string> lvRoom = { "Bathroom", "Kitchen", "Upstairs" };
+	vector<string> downBR = { "Living Room" };
+	vector<string> kitchen = { "Garage", "Living Room" };
+	vector<string> garage = { "Kitchen" };
 
 	//Creates Rooms
 	Room Bedroom( roomList[1], 's', bdroom);
+	Room Bedroom(roomList[2], NULL, upBR);
+	Room Bedroom(roomList[3], NULL, exRoom);
+	Room Bedroom(roomList[4], NULL, upHall);
+	Room Bedroom(roomList[5], 's', lvRoom);
+	Room Bedroom(roomList[6], 's', downBR);
+	Room Bedroom(roomList[7], 's', kitchen);
+	Room Bedroom(roomList[8], 's', garage);
+
+
 
 	//Creates Player
 	system("cls");
@@ -93,7 +103,7 @@ int main()
 		switch (player1.playerPosition)
 		{
 		case 1:
-
+			break;
 		}
 	} while (player1.timer < 200);
 	return 0;
@@ -107,5 +117,5 @@ string itemCheck(char item)
 	{
 		//return 
 	}
-	return NULL;
+	return "String";
 }
