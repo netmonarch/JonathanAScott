@@ -32,18 +32,37 @@ using namespace std;
 class Room
 {
 public:
-	int item;
+	string item;
 	string roomName;
 	vector<string> connectedRooms;
 	//Contructor
-	Room(string &name, char itm, vector<string> &cRoom) :roomName(name), item(itm), connectedRooms(cRoom)
+	Room(string &name, string itm, vector<string> &cRoom) :roomName(name), item(itm), connectedRooms(cRoom)
 	{
-		cout << &connectedRooms;
+		
 	}
 	
 	int takeTurn()
 	{
-
+		int tempI = 0;
+		int selection;
+		for (int i = 0; i < connectedRooms.size; i++)
+		{
+			cout << i + 1 << ". Enter " << connectedRooms[i] << endl;
+			tempI = i + 1;
+		}
+		if (item != "")
+		{
+			tempI++;
+			cout << tempI << ". Collect " << item << endl;
+		}
+		do {
+			cout << "Make Selection: ";
+			cin >> selection;
+		} while (selection > tempI || selection <= 0);
+		if (item == "")
+		{
+			i
+		}
 	}
 };
 // End Room class and construct
