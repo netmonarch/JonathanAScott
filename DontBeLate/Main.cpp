@@ -26,7 +26,7 @@ int main()
 {	
 	//Moves and resizes console window
 	HWND wh = GetConsoleWindow();
-	MoveWindow(wh, 0, 0, 1000, 600, true);
+	MoveWindow(wh, 0, 0, 800, 500, true);
 
 	//ASCII Items
 	const string key[6] =
@@ -39,24 +39,34 @@ int main()
 		" #____/   "
 	};
 	//Rooms
-	// const string roomList[9] = { NULL, "Bedroom", "Bathroom", "Exerise Room", "Hallway", "Living Room", "Downstairs Bathroom", "Kitchen", "Garage"};
+	string roomList[9] = { "", "Bedroom", "Bathroom", "Exerise Room", "Hallway", "Living Room", "Downstairs Bathroom", "Kitchen", "Garage"};
+
 
 	//Declaring constant variables for connected rooms
-	const vector<string> bdroom = { "Bathroom", "Hallway" };
-	const vector<string> upHall = { "Exercise Room", "Downstairs", "Bedroom" };
-	const vector<string> upBR = { "Bedroom" };
-	const vector<string> exRoom = { "Hallway" };
-	const vector<string> lvRoom = { "Bathroom", "Kitchen", "Upstairs" };
-	const vector<string> downBR = { "Living Room" };
-	const vector<string> kitchen = { "Garage", "Living Room" };
-	const vector<string> garage = { "Kitchen" };
+	vector<string> bdroom = { "Bathroom", "Hallway" };
+	vector<string> upHall = { "Exercise Room", "Downstairs", "Bedroom" };
+	vector<string> upBR = { "Bedroom" };
+	vector<string> exRoom = { "Hallway" };
+	vector<string> lvRoom = { "Bathroom", "Kitchen", "Upstairs" };
+	vector<string> downBR = { "Living Room" };
+	vector<string> kitchen = { "Garage", "Living Room" };
+	vector<string> garage = { "Kitchen" };
 
 	//Creates Rooms
-	// Room Bedroom( roomList[1], 's', bdroom); TESTING
+	Room Bedroom( roomList[1], 's', bdroom);
+	Room Bedroom(roomList[2], NULL, upBR);
+	Room Bedroom(roomList[3], NULL, exRoom);
+	Room Bedroom(roomList[4], NULL, upHall);
+	Room Bedroom(roomList[5], 's', lvRoom);
+	Room Bedroom(roomList[6], 's', downBR);
+	Room Bedroom(roomList[7], 's', kitchen);
+	Room Bedroom(roomList[8], 's', garage);
+
+
 
 	//Creates Player
 	system("cls");
-	cout << "Don't Be Late\n" << endl;
+	cout << "Don't Be Late/n" << endl;
 	cout << "Enter a name for your player: ";
 	string pName;
 	getline(cin, pName);
@@ -73,52 +83,23 @@ int main()
 			break;
 		case 2:
 			//Second Floor
-			cout << " ***************************************************************************** " << endl;//Output Line 1
-			cout << " *         Items          |                      Floor 2                     * " << endl;
-			cout << " *                        | ________________________________________________ * " << endl;
-			cout << " *                        |                                                  * " << endl;
-			cout << " *                        |                                                  * " << endl;
-			cout << " *                        |                                                  * " << endl;
-			cout << " *                        |                                                  * " << endl;
-			cout << " *                        |                                                  * " << endl;
-			cout << " *                        |                                                  * " << endl;
-			cout << " *                        |                                                  * " << endl;
-			cout << " *                        |                                                  * " << endl;
-			cout << " *                        |                                                  * " << endl;
-			cout << " *                        |                                                  * " << endl;
-			cout << " *                        |                                                  * " << endl;
-			cout << " *                        |                                                  * " << endl;
-			cout << " *                        |                                                  * " << endl;
-			cout << " *                        |                                                  * " << endl;
-			cout << " *                        |                                                  * " << endl;
-			cout << " *                        |                                                  * " << endl;
-			cout << " *                        |                                                  * " << endl;
-			cout << " *                        |                                                  * " << endl;
-			cout << " *                        |                                                  * " << endl;
-			cout << " *                        |                                                  * " << endl;
-			cout << " *                        |                                                  * " << endl;
-			cout << " *                        |                                                  * " << endl;
-			cout << " *                        |                                                  * " << endl;
-			cout << " *                        |                                                  * " << endl;
-			cout << " *                        |                                                  * " << endl;
-			cout << " *                        |                                                  * " << endl;
-			cout << " *                        |                                                  * " << endl;
-			cout << " *                        |                                                  * " << endl;
-			cout << " *                        |                                                  * " << endl;
-			cout << " ***************************************************************************** " << endl;
+			cout << "***********";//Output Line 1
+			cout << "***********" << endl;
+			cout << "           " << endl;
 			if (player1.inventory[0] == NULL)
-						{
-							cout << "ItemsSpaces" << endl;
-						}
-						else
-						{
-							string item = itemCheck(player1.inventory[0]);
-							cout << item[0] << endl;
-						}		
-					break;
-					}
+			{
+				cout << "            " << endl;
+			}
+			else
+			{
+				string item = itemCheck(player1.inventory[0]);
+				cout << item[0] << endl;
+			}
+			break;
+		}
+
 		//Text output
-		// cout << "You are in the " << roomList[player1.playerPosition] << "." << endl;
+		cout << "You are in the " << roomList[player1.playerPosition] << "." << endl;
 		switch (player1.playerPosition)
 		{
 		case 1:
@@ -136,5 +117,5 @@ string itemCheck(char item)
 	{
 		//return 
 	}
-	return NULL;
+	return "String";
 }
