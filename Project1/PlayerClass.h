@@ -1,4 +1,5 @@
 #include <iostream>
+#include <string>
 
 using namespace std;
 
@@ -17,13 +18,16 @@ using namespace std;
 // *********************************
 
 
-// ************ Location Key *******
-/*
-	1 - Bedroom		 2 - Bathroom		 3 - Hallway
-	4 - Stairs		 5 - Living Area	 6 - Weight Room
-	7 - Kitchen		 8 - D. Bathroom	 9 - Garage
+/* Location Key
+1. Bedroom
+2. Upstairs Bathroom
+3. Exercise Room
+4. Hallway
+5. Living Room
+6. Downstairs Bathroom
+7. Kitchen
+8. Garage
 */
-// *********************************
 
 
 
@@ -33,18 +37,18 @@ class Player
 public:
 	string playerName; // What do you want the player to be called?
 	//char playerGender; // Gender of the player; "M" for male, "F" for female
-	char inventory[10]; // See item key
+	char inventory[5]; // See item key
 	int timer;
+	int playerPosition;
+	int floor;
 	Player(string &name) :playerName(name)
 	{
 		//playerGender = gender;
 		timer = 0;
-		for (int i = 0; i < 10; i++)
+		floor = 2;
+		playerPosition = 1;
+		for (int i = 0; i < 5; i++)
 			inventory[i] = NULL;
-	}
-	void increaseTimer(int timeWasted)
-	{
-		timer += timeWasted;
 	}
 	
 };

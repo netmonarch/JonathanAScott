@@ -16,40 +16,34 @@ using namespace std;
 	p = phone
 	w = wallet
 */
-// *********************************
 
-
-// ************ Location Key *******
-/*
-1 - Bedroom		 2 - Bathroom		 3 - Hallway
-4 - Stairs		 5 - Living Area	 6 - Weight Room
-7 - Kitchen		 8 - D. Bathroom	 9 - Garage
+/* Location Key
+1. Bedroom
+2. Upstairs Bathroom
+3. Exercise Room
+4. Hallway
+5. Living Room
+6. Downstairs Bathroom
+7. Kitchen
+8. Garage
 */
-// *********************************
 
 // Room class and construct
 class Room
 {
 public:
+	int item;
 	string roomName;
-	char item;
-	bool occupied;
-	string *connectedRooms[];
-
+	vector<string> connectedRooms;
 	//Contructor
-	Room(string name, char itm, string *rooms[], int numRooms) :item(itm)
+	Room(string &name, char itm, vector<string> &cRoom) :roomName(name), item(itm), connectedRooms(cRoom)
 	{
-		//item = itm;
-		for (int i = 0; i < numRooms - 1; i++)
-		{
-
-		}
-		connectedRooms[] = rooms[];
-		occupied = 0;
+		cout << &connectedRooms;
 	}
-	void optionSelect()
+	
+	int takeTurn()
 	{
-		cout << "1. " << connectedRooms[0] << endl;
+
 	}
 };
 // End Room class and construct
