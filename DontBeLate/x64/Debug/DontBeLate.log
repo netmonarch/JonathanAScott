@@ -1,3 +1,13 @@
 ﻿  Main.cpp
-  DontBeLate.vcxproj -> C:\Users\kerra\Source\Repos\JonathanAScott\x64\Debug\DontBeLate.exe
-  DontBeLate.vcxproj -> C:\Users\kerra\Source\Repos\JonathanAScott\x64\Debug\DontBeLate.pdb (Partial PDB)
+c:\users\kerra\source\repos\jonathanascott\dontbelate\roomclass.h(48): error C3867: 'std::vector<std::string,std::allocator<_Ty>>::size': non-standard syntax; use '&' to create a pointer to member
+          with
+          [
+              _Ty=std::string
+          ]
+c:\users\kerra\source\repos\jonathanascott\dontbelate\roomclass.h(48): error C2446: '<': no conversion from 'unsigned __int64 (__cdecl std::vector<std::string,std::allocator<_Ty>>::* )(void) noexcept const' to 'int'
+          with
+          [
+              _Ty=std::string
+          ]
+  c:\users\kerra\source\repos\jonathanascott\dontbelate\roomclass.h(48): note: There is no context in which this conversion is possible
+c:\users\kerra\source\repos\jonathanascott\dontbelate\main.cpp(133): fatal error C1075: the left brace '{' was unmatched at the end of the file

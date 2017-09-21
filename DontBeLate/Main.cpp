@@ -430,11 +430,11 @@ int main()
 			// Check/output player location for Livingroom
 			if (player1.playerPosition == 5)
 			{
-				cout << pchar[0] << "                |     " << endl; // pchar 1st line
+				cout << pchar[0] << "                |     "; // pchar 1st line
 			}
 			else
 			{
-				cout << "                   |    " << endl;
+				cout << "                |    ";
 			}
 			// Check/output player location for Downstairs Bathroom
 			if (player1.playerPosition == 6)
@@ -443,7 +443,7 @@ int main()
 			}
 			else
 			{
-				cout << "    |*" << endl;
+				cout << "       |*" << endl;
 			}
 			
 			cout << " *  "; // Insert 6th coffee line
@@ -981,6 +981,7 @@ int main()
 			cout << " *****************************************************************************" << endl;
 			break;
 		}
+
 
 		//Text output
 		cout << "You are in the " << roomList[player1.playerPosition] << "." << endl;
