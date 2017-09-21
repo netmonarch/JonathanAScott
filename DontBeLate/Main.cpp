@@ -984,6 +984,7 @@ int main()
 		}
 
 		//Text output
+		cout << player1.playerPosition;
 		cout << "You are in the " << roomList[player1.playerPosition] << "." << endl;
 		switch (player1.playerPosition)
 		{
@@ -992,6 +993,8 @@ int main()
 			selection = Bedroom.takeTurn();
 			if (checkInput(Bedroom, selection) == true)
 			{
+				cout << selection;
+				system("PAUSE");
 				if (selection > Bedroom.connectedRooms.size() && Bedroom.item != "")
 				{
 					player1.inventory[0] = 's';
@@ -1000,7 +1003,7 @@ int main()
 				}
 				else
 				{
-					changeRoom(Bedroom.connectedRooms[selection], player1);
+					changeRoom(Bedroom.connectedRooms[selection-1], player1);
 				}
 			}
 			break;
@@ -1008,7 +1011,8 @@ int main()
 			selection = UpBathroom.takeTurn();
 			if (checkInput(UpBathroom, selection) == true)
 			{
-				changeRoom(UpBathroom.connectedRooms[selection], player1);
+				
+				changeRoom(UpBathroom.connectedRooms[selection-1], player1);
 			}
 			break;
 		case 3:
@@ -1051,14 +1055,21 @@ bool checkInput(Room current, int selection)
 
 void changeRoom(string room, Player person)
 { 
-	if (room == "Bedroom")
+	cout << room;
+	system("PAUSE");
+	if (room.compare("Bedroom") == 0)
 	{
 		person.playerPosition = 1;
 		person.timer += 2;
 	}
-	else if (room == "Bathroom")
+	else if (room.compare("Bathroom") == 0)
 	{
+		cout << "HI3";
+		system("PAUSE");
 		person.playerPosition = 2;
 		person.timer += 2;
+		cout << person.playerPosition;
+		system("PAUSE");
+
 	}
 }
