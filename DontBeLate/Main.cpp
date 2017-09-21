@@ -124,7 +124,7 @@ int main()
 
 	//Creates Player
 	system("cls");
-	cout << "Don't Be Late/n" << endl;
+	cout << "Don't Be Late\n" << endl;
 	cout << "Enter a name for your player: ";
 	string pName;
 	getline(cin, pName);
