@@ -43,8 +43,8 @@ public:
 	Player(string &name) :playerName(name)
 	{
 		timer = 0;
-		floor = 2;
-		playerPosition = 1;
+		floor = 1;
+		playerPosition = 8;
 		for (int i = 0; i < 5; i++)
 			inventory[i] = "";
 	}

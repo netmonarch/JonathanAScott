@@ -149,7 +149,7 @@ int main()
 			{
 				cout << "             ";
 			}
-			cout << "  |                              |                         |*" << endl; 
+			cout << "  |                               _________________________ *" << endl; 
 
 			cout << " *  "; // Insert 2nd Key line
 			if (player1.inventory[0] == "k")
@@ -213,7 +213,7 @@ int main()
 			// Check/output player location for Garage
 			if (player1.playerPosition == 8)
 			{
-				cout << pchar[1] << "             |*" << endl; // pchar 2nd line
+				cout << pchar[1] << "          |*" << endl; // pchar 2nd line
 			}
 			else
 			{
@@ -232,7 +232,7 @@ int main()
 			// Check/output player location for Garage
 			if (player1.playerPosition == 8)
 			{
-				cout << pchar[2] << "             |*" << endl; // pchar 3rd line
+				cout << pchar[2] << "          |*" << endl; // pchar 3rd line
 			}
 			else
 			{
@@ -431,20 +431,20 @@ int main()
 			// Check/output player location for Livingroom
 			if (player1.playerPosition == 5)
 			{
-				cout << pchar[0] << "                |     " << endl; // pchar 1st line
+				cout << pchar[0] << "                |     "; // pchar 1st line
 			}
 			else
 			{
-				cout << "                   |    " << endl;
+				cout << "                   |     ";
 			}
 			// Check/output player location for Downstairs Bathroom
 			if (player1.playerPosition == 6)
 			{
-				cout << pchar[0] << "    |*" << endl; // pchar 1st line
+				cout << pchar[0] << "       |*" << endl; // pchar 1st line
 			}
 			else
 			{
-				cout << "    |*" << endl;
+				cout << "          |*" << endl;
 			}
 			
 			cout << " *  "; // Insert 6th coffee line
@@ -460,11 +460,11 @@ int main()
 			// Check/output player location for Livingroom
 			if (player1.playerPosition == 5)
 			{
-				cout << pchar[1] << "                |     " << endl; // pchar 2nd line
+				cout << pchar[1] << "                |     "; // pchar 2nd line
 			}
 			else
 			{
-				cout << "                   |     " << endl;
+				cout << "                   |     ";
 			}
 			// Check/output player location for Downstairs Bathroom
 			if (player1.playerPosition == 6)
@@ -489,11 +489,11 @@ int main()
 			// Check/output player location for Livingroom
 			if (player1.playerPosition == 5)
 			{
-				cout << pchar[2] << "                |     " << endl; // pchar 3rd line
+				cout << pchar[2] << "                |     "; // pchar 3rd line
 			}
 			else
 			{
-				cout << "                   |     " << endl;
+				cout << "                   |     ";
 			}
 			// Check/output player location for Downstairs Bathroom
 			if (player1.playerPosition == 6)
@@ -844,11 +844,11 @@ int main()
 			// Check/output player location for Bedroom
 			if (player1.playerPosition == 1)
 			{
-				cout << pchar[1] << "               |   " << endl; // pchar 2nd line
+				cout << pchar[1] << "               |   "; // pchar 2nd line
 			}
 			else
 			{
-				cout << "               |   " << endl;
+				cout << "                  |   ";
 			}
 			// Check/output player location for Upper Bathroom
 			if (player1.playerPosition == 2)
@@ -873,11 +873,11 @@ int main()
 			// Check/output player location for Bedroom
 			if (player1.playerPosition == 1)
 			{
-				cout << pchar[2] << "               |   " << endl; // pchar 3rd line
+				cout << pchar[2] << "               |   "; // pchar 3rd line
 			}
 			else
 			{
-				cout << "               |   " << endl;
+				cout << "                  |   ";
 			}
 			// Check/output player location for Upper Bathroom
 			if (player1.playerPosition == 2)
@@ -982,6 +982,7 @@ int main()
 			cout << " *****************************************************************************" << endl;
 			break;
 		}
+
 
 		//Text output
 		cout << player1.playerPosition;
