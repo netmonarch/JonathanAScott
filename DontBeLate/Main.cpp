@@ -111,7 +111,7 @@ int main()
 	vector<string> garage = { "Kitchen" };
 
 	//Creates Rooms
-	Room Bedroom(roomList[1], "Cloths", bdroom);
+	Room Bedroom(roomList[1], "Clothes", bdroom);
 	Room UpBathroom(roomList[2], "", upBR);
 	Room ExerciseRoom(roomList[3], "Phone", exRoom);
 	Room UpHallway(roomList[4], "", upHall);
@@ -991,7 +991,7 @@ int main()
 			cout << " *  "; // Insert 6th wallet line
 			if (player1.inventory[0] == "w")
 			{
-				cout << wallet[6];
+				cout << wallet[5];
 			}
 			else
 			{
