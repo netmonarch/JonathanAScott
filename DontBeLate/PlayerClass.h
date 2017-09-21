@@ -36,12 +36,14 @@ class Player
 {
 public:
 	string playerName; // What do you want the player to be called?
+	//char playerGender; // Gender of the player; "M" for male, "F" for female
 	string inventory[5]; // See item key
 	int timer;
 	int playerPosition;
 	int floor;
 	Player(string &name) :playerName(name)
 	{
+		//playerGender = gender;
 		timer = 0;
 		floor = 2;
 		playerPosition = 1;
