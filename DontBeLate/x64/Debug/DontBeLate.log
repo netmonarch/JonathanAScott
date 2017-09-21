@@ -1,3 +1,46 @@
 ﻿  Main.cpp
-  DontBeLate.vcxproj -> C:\Users\kerra\Source\Repos\JonathanAScott\x64\Debug\DontBeLate.exe
-  DontBeLate.vcxproj -> C:\Users\kerra\Source\Repos\JonathanAScott\x64\Debug\DontBeLate.pdb (Partial PDB)
+f:\classes\sdva203 a c++ programming ii\9-14-17\dontbelate\roomclass.h(48): error C3867: 'std::vector<std::string,std::allocator<_Ty>>::size': non-standard syntax; use '&' to create a pointer to member
+          with
+          [
+              _Ty=std::string
+          ]
+f:\classes\sdva203 a c++ programming ii\9-14-17\dontbelate\roomclass.h(48): error C2446: '<': no conversion from 'unsigned __int64 (__cdecl std::vector<std::string,std::allocator<_Ty>>::* )(void) noexcept const' to 'int'
+          with
+          [
+              _Ty=std::string
+          ]
+  f:\classes\sdva203 a c++ programming ii\9-14-17\dontbelate\roomclass.h(48): note: There is no context in which this conversion is possible
+f:\classes\sdva203 a c++ programming ii\9-14-17\dontbelate\main.cpp(995): error C3867: 'std::vector<std::string,std::allocator<_Ty>>::size': non-standard syntax; use '&' to create a pointer to member
+          with
+          [
+              _Ty=std::string
+          ]
+f:\classes\sdva203 a c++ programming ii\9-14-17\dontbelate\main.cpp(995): error C2446: '>': no conversion from 'unsigned __int64 (__cdecl std::vector<std::string,std::allocator<_Ty>>::* )(void) noexcept const' to 'int'
+          with
+          [
+              _Ty=std::string
+          ]
+  f:\classes\sdva203 a c++ programming ii\9-14-17\dontbelate\main.cpp(995): note: There is no context in which this conversion is possible
+f:\classes\sdva203 a c++ programming ii\9-14-17\dontbelate\main.cpp(1038): error C3867: 'std::vector<std::string,std::allocator<_Ty>>::size': non-standard syntax; use '&' to create a pointer to member
+          with
+          [
+              _Ty=std::string
+          ]
+f:\classes\sdva203 a c++ programming ii\9-14-17\dontbelate\main.cpp(1038): error C2446: '>': no conversion from 'unsigned __int64 (__cdecl std::vector<std::string,std::allocator<_Ty>>::* )(void) noexcept const' to 'int'
+          with
+          [
+              _Ty=std::string
+          ]
+  f:\classes\sdva203 a c++ programming ii\9-14-17\dontbelate\main.cpp(1038): note: There is no context in which this conversion is possible
+f:\classes\sdva203 a c++ programming ii\9-14-17\dontbelate\main.cpp(1045): error C3867: 'std::vector<std::string,std::allocator<_Ty>>::size': non-standard syntax; use '&' to create a pointer to member
+          with
+          [
+              _Ty=std::string
+          ]
+f:\classes\sdva203 a c++ programming ii\9-14-17\dontbelate\main.cpp(1045): error C2296: '+': illegal, left operand has type 'unsigned __int64 (__cdecl std::vector<std::string,std::allocator<_Ty>>::* )(void) noexcept const'
+          with
+          [
+              _Ty=std::string
+          ]
+f:\classes\sdva203 a c++ programming ii\9-14-17\dontbelate\main.cpp(1050): error C2561: 'checkInput': function must return a value
+  f:\classes\sdva203 a c++ programming ii\9-14-17\dontbelate\main.cpp(1034): note: see declaration of 'checkInput'

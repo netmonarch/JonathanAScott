@@ -7,11 +7,13 @@
 
 using namespace std;
 
-
+bool checkInput(Room, int);
+void changeRoom(string, Player);
 
 #pragma once
 
-/* Location Key
+/* 
+Location Key
 1. Bedroom
 2. Upstairs Bathroom
 3. Exercise Room
@@ -98,7 +100,7 @@ int main()
 	string roomList[9] = { "", "Bedroom", "Bathroom", "Exerise Room", "Hallway", "Living Room", "Downstairs Bathroom", "Kitchen", "Garage"};
 
 
-	//Declaring constant variables for connected rooms
+	//Declaring variables for connected rooms
 	vector<string> bdroom = { "Bathroom", "Hallway" };
 	vector<string> upHall = { "Exercise Room", "Downstairs", "Bedroom" };
 	vector<string> upBR = { "Bedroom" };
@@ -986,14 +988,45 @@ int main()
 		cout << "You are in the " << roomList[player1.playerPosition] << "." << endl;
 		switch (player1.playerPosition)
 		{
+			int selection;
 		case 1:
-			if (checkInput(Bedroom, Bedroom.takeTurn()) == true)
+			selection = Bedroom.takeTurn();
+			if (checkInput(Bedroom, selection) == true)
 			{
-				
+				if (selection > Bedroom.connectedRooms.size && Bedroom.item != "")
+				{
+					player1.inventory[0] = 's';
+					Bedroom.item = "";
+					player1.timer += 5;
+				}
+				else
+				{
+					changeRoom(Bedroom.connectedRooms[selection], player1);
+				}
 			}
 			break;
+		case 2:
+			selection = UpBathroom.takeTurn();
+			if (checkInput(UpBathroom, selection) == true)
+			{
+				changeRoom(UpBathroom.connectedRooms[selection], player1);
+			}
+			break;
+		case 3:
+			break;
+		case 4:
+			break;
+		case 5:
+			break;
+		case 6:
+			break;
+		case 7:
+			break;
+		case 8:
+			break;
+
 		}
-	} while (player1.timer < 0);
+	} while (player1.timer <= 60);
 	return 0;
 }
 
@@ -1016,4 +1049,13 @@ bool checkInput(Room current, int selection)
 			return true;
 	}
 	return;
+}
+
+void changeRoom(string room, Player person)
+{ 
+	if (room == "Bedroom")
+	{
+		person.playerPosition = 1;
+		person.timer += 2;
+	}
 }

@@ -3,7 +3,7 @@
 
 using namespace std;
 
-#pragma once
+//#pragma once
 
 // Player Class for Project, "Don't Be Late"
 
