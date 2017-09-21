@@ -45,7 +45,7 @@ public:
 	{
 		//playerGender = gender;
 		timer = 0;
-		floor = 2;
+		floor = 1;
 		playerPosition = 1;
 		for (int i = 0; i < 5; i++)
 			inventory[i] = "";
