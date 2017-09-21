@@ -111,14 +111,14 @@ int main()
 	vector<string> garage = { "Kitchen" };
 
 	//Creates Rooms
-	Room Bedroom(roomList[1], "", bdroom);
+	Room Bedroom(roomList[1], "Cloths", bdroom);
 	Room UpBathroom(roomList[2], "", upBR);
-	Room ExerciseRoom(roomList[3], "", exRoom);
+	Room ExerciseRoom(roomList[3], "Phone", exRoom);
 	Room UpHallway(roomList[4], "", upHall);
-	Room LivingRoom(roomList[5], "", lvRoom);
+	Room LivingRoom(roomList[5], "Wallet", lvRoom);
 	Room DownBathroom(roomList[6], "", downBR);
-	Room Kitchen(roomList[7], "", kitchen);
-	Room Garage(roomList[8], "", garage);
+	Room Kitchen(roomList[7], "Coffe", kitchen);
+	Room Garage(roomList[8], "Keys", garage);
 
 
 
@@ -129,7 +129,6 @@ int main()
 	string pName;
 	getline(cin, pName);
 	Player player1(pName);
-	player1.inventory[0] = 'k';
 
 	// Main Game Loop
 	do {
@@ -993,7 +992,7 @@ int main()
 			selection = Bedroom.takeTurn();
 			if (checkInput(Bedroom, selection) == true)
 			{
-				if (selection > Bedroom.connectedRooms.size && Bedroom.item != "")
+				if (selection > Bedroom.connectedRooms.size() && Bedroom.item != "")
 				{
 					player1.inventory[0] = 's';
 					Bedroom.item = "";
@@ -1036,19 +1035,18 @@ bool checkInput(Room current, int selection)
 {
 	if (current.item == "")
 	{
-		if (selection > current.connectedRooms.size || selection <= 0)
+		if (selection > current.connectedRooms.size() || selection <= 0)
 			return false;
 		else
 			return true;
 	}
 	else
 	{
-		if (selection > current.connectedRooms.size + 1 || selection <= 0)
+		if (selection > current.connectedRooms.size() + 1 || selection <= 0)
 			return false;
 		else
 			return true;
 	}
-	return;
 }
 
 void changeRoom(string room, Player person)
@@ -1056,6 +1054,11 @@ void changeRoom(string room, Player person)
 	if (room == "Bedroom")
 	{
 		person.playerPosition = 1;
+		person.timer += 2;
+	}
+	else if (room == "Bathroom")
+	{
+		person.playerPosition = 2;
 		person.timer += 2;
 	}
 }
