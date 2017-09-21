@@ -7,7 +7,7 @@
 
 using namespace std;
 
-string itemCheck(char);
+
 
 #pragma once
 
@@ -110,13 +110,13 @@ int main()
 
 	//Creates Rooms
 	Room Bedroom(roomList[1], "", bdroom);
-	Room Bedrooms(roomList[2], "", upBR);
-	Room Bedroomf(roomList[3], "", exRoom);
-	Room Bedroomg(roomList[4], "", upHall);
-	Room Bedroomh(roomList[5], "", lvRoom);
-	Room Bedroomj(roomList[6], "", downBR);
-	Room Bedroomk(roomList[7], "", kitchen);
-	Room Bedrooml(roomList[8], "", garage);
+	Room UpBathroom(roomList[2], "", upBR);
+	Room ExerciseRoom(roomList[3], "", exRoom);
+	Room UpHallway(roomList[4], "", upHall);
+	Room LivingRoom(roomList[5], "", lvRoom);
+	Room DownBathroom(roomList[6], "", downBR);
+	Room Kitchen(roomList[7], "", kitchen);
+	Room Garage(roomList[8], "", garage);
 
 
 
@@ -979,17 +979,6 @@ int main()
 			}
 			cout << "  |                                                         *" << endl;
 			cout << " *****************************************************************************" << endl;
-			
-			/*
-			if (player1.inventory[0] == "")
-			{
-				cout << "            " << endl;
-			}
-			else
-			{
-				//string item = itemCheck(player1.inventory[0]);
-				//cout << item[0] << endl;
-			}*/
 			break;
 		}
 
@@ -998,19 +987,33 @@ int main()
 		switch (player1.playerPosition)
 		{
 		case 1:
+			if (checkInput(Bedroom, Bedroom.takeTurn()) == true)
+			{
+				
+			}
 			break;
 		}
 	} while (player1.timer < 0);
 	return 0;
 }
 
-
 //Functions
-string itemCheck(char item)
+
+bool checkInput(Room current, int selection) 
 {
-	if (item == 'k')
+	if (current.item == "")
 	{
-		//return 
+		if (selection > current.connectedRooms.size || selection <= 0)
+			return false;
+		else
+			return true;
 	}
-	return "String";
+	else
+	{
+		if (selection > current.connectedRooms.size + 1 || selection <= 0)
+			return false;
+		else
+			return true;
+	}
+	return;
 }

@@ -52,17 +52,12 @@ public:
 		}
 		if (item != "")
 		{
+			cout << tempI + 1 << ". Collect " << item << endl;
 			tempI++;
-			cout << tempI << ". Collect " << item << endl;
 		}
-		do {
-			cout << "Make Selection: ";
-			cin >> selection;
-		} while (selection > tempI || selection <= 0);
-		if (item == "")
-		{
-
-		}
+		cout << "Make Selection: ";
+		cin >> selection;
+		return selection;
 	}
 };
 // End Room class and construct
