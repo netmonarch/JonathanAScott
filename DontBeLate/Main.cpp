@@ -544,7 +544,9 @@ int main()
 			{
 				cout << "             ";
 			}
-			cout << "  |                                                         *" << endl;
+			cout << "  |                   ";
+			// Display timer
+			cout << player1.timer << "                                     *" << endl;
 			cout << " *  "; // Insert 6th wallet line
 			if (player1.inventory[0] == "w")
 			{
@@ -968,7 +970,9 @@ int main()
 			{
 				cout << "             ";
 			}
-			cout << "  |                                                         *" << endl;
+			cout << "  |                   ";
+			// Display timer
+			cout << player1.timer << "                                     *" << endl;
 			cout << " *  "; // Insert 6th wallet line
 			if (player1.inventory[0] == "w")
 			{
