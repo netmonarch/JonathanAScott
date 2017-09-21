@@ -7,11 +7,13 @@
 
 using namespace std;
 
-
+bool checkInput(Room, int);
+void changeRoom(string, Player);
 
 #pragma once
 
-/* Location Key
+/* 
+Location Key
 1. Bedroom
 2. Upstairs Bathroom
 3. Exercise Room
@@ -98,7 +100,7 @@ int main()
 	string roomList[9] = { "", "Bedroom", "Bathroom", "Exerise Room", "Hallway", "Living Room", "Downstairs Bathroom", "Kitchen", "Garage"};
 
 
-	//Declaring constant variables for connected rooms
+	//Declaring variables for connected rooms
 	vector<string> bdroom = { "Bathroom", "Hallway" };
 	vector<string> upHall = { "Exercise Room", "Downstairs", "Bedroom" };
 	vector<string> upBR = { "Bedroom" };
@@ -109,14 +111,14 @@ int main()
 	vector<string> garage = { "Kitchen" };
 
 	//Creates Rooms
-	Room Bedroom(roomList[1], "", bdroom);
+	Room Bedroom(roomList[1], "Cloths", bdroom);
 	Room UpBathroom(roomList[2], "", upBR);
-	Room ExerciseRoom(roomList[3], "", exRoom);
+	Room ExerciseRoom(roomList[3], "Phone", exRoom);
 	Room UpHallway(roomList[4], "", upHall);
-	Room LivingRoom(roomList[5], "", lvRoom);
+	Room LivingRoom(roomList[5], "Wallet", lvRoom);
 	Room DownBathroom(roomList[6], "", downBR);
-	Room Kitchen(roomList[7], "", kitchen);
-	Room Garage(roomList[8], "", garage);
+	Room Kitchen(roomList[7], "Coffe", kitchen);
+	Room Garage(roomList[8], "Keys", garage);
 
 
 
@@ -127,7 +129,6 @@ int main()
 	string pName;
 	getline(cin, pName);
 	Player player1(pName);
-	player1.inventory[0] = 'k';
 
 	// Main Game Loop
 	do {
@@ -987,14 +988,45 @@ int main()
 		cout << "You are in the " << roomList[player1.playerPosition] << "." << endl;
 		switch (player1.playerPosition)
 		{
+			int selection;
 		case 1:
-			if (checkInput(Bedroom, Bedroom.takeTurn()) == true)
+			selection = Bedroom.takeTurn();
+			if (checkInput(Bedroom, selection) == true)
 			{
-				
+				if (selection > Bedroom.connectedRooms.size() && Bedroom.item != "")
+				{
+					player1.inventory[0] = 's';
+					Bedroom.item = "";
+					player1.timer += 5;
+				}
+				else
+				{
+					changeRoom(Bedroom.connectedRooms[selection], player1);
+				}
 			}
 			break;
+		case 2:
+			selection = UpBathroom.takeTurn();
+			if (checkInput(UpBathroom, selection) == true)
+			{
+				changeRoom(UpBathroom.connectedRooms[selection], player1);
+			}
+			break;
+		case 3:
+			break;
+		case 4:
+			break;
+		case 5:
+			break;
+		case 6:
+			break;
+		case 7:
+			break;
+		case 8:
+			break;
+
 		}
-	} while (player1.timer < 0);
+	} while (player1.timer <= 60);
 	return 0;
 }
 
@@ -1004,17 +1036,30 @@ bool checkInput(Room current, int selection)
 {
 	if (current.item == "")
 	{
-		if (selection > current.connectedRooms.size || selection <= 0)
+		if (selection > current.connectedRooms.size() || selection <= 0)
 			return false;
 		else
 			return true;
 	}
 	else
 	{
-		if (selection > current.connectedRooms.size + 1 || selection <= 0)
+		if (selection > current.connectedRooms.size() + 1 || selection <= 0)
 			return false;
 		else
 			return true;
 	}
-	return;
+}
+
+void changeRoom(string room, Player person)
+{ 
+	if (room == "Bedroom")
+	{
+		person.playerPosition = 1;
+		person.timer += 2;
+	}
+	else if (room == "Bathroom")
+	{
+		person.playerPosition = 2;
+		person.timer += 2;
+	}
 }

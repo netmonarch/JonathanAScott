@@ -4,7 +4,7 @@
 
 using namespace std;
 
-#pragma once
+//#pragma once
 
 // Player Class for Project, "Don't Be Late"
 
@@ -45,7 +45,7 @@ public:
 	{
 		int tempI = 0;
 		int selection;
-		for (int i = 0; i < connectedRooms.size; i++)
+		for (int i = 0; i < connectedRooms.size(); i++)
 		{
 			cout << i + 1 << ". Enter " << connectedRooms[i] << endl;
 			tempI = i + 1;
