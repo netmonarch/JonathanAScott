@@ -44,7 +44,7 @@ public:
 	{
 		timer = 0;
 		floor = 1;
-		playerPosition = 1;
+		playerPosition = 7;
 		for (int i = 0; i < 5; i++)
 			inventory[i] = "";
 	}

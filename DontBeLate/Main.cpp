@@ -26,7 +26,7 @@ int main()
 {	
 	//Moves and resizes console window
 	HWND wh = GetConsoleWindow();
-	MoveWindow(wh, 0, 0, 800, 600, true);
+	MoveWindow(wh, 0, 0, 800, 750, true);
 
 	//ASCII Items
 	// Item have 6 elements, elements are 14 characters long
@@ -138,7 +138,7 @@ int main()
 		case 1:
 			// First Floor
 			cout << " *****************************************************************************" << endl;//Output Line 1
-			cout << " *      Items      |                         Floor 2                         *" << endl;
+			cout << " *      Items      |                         Floor 1                         *" << endl;
 			cout << " *  "; // Insert item  1st key line
 			if (player1.inventory[0] == "k")
 			{
@@ -148,7 +148,7 @@ int main()
 			{
 				cout << "             ";
 			}
-			cout <<"| __________________________ *" << endl; 
+			cout << "  |                              |                         |*" << endl; 
 
 			cout << " *  "; // Insert 2nd Key line
 			if (player1.inventory[0] == "k")
@@ -159,7 +159,7 @@ int main()
 			{
 				cout << "             ";
 			}
-			cout << "|                              |                         |*" << endl;
+			cout << "  |                              |                         |*" << endl;
 			cout << " *  ";// Insert 3rd Key line
 			if (player1.inventory[0] == "k")
 			{
@@ -169,7 +169,7 @@ int main()
 			{
 				cout << "             ";
 			}
-			cout << "|                              ||         Garage         |*" << endl;
+			cout << "  |                              ||         Garage         |*" << endl;
 			cout << " *  ";// Insert 4th Key line
 			if (player1.inventory[0] == "k")
 			{
@@ -179,7 +179,7 @@ int main()
 			{
 				cout << "             ";
 			}
-			cout << "|                               |                        |*" << endl;
+			cout << "  |                               |                        |*" << endl;
 			cout << " *  "; // Insert 5th Key line
 			if (player1.inventory[0] == "k")
 			{
@@ -189,17 +189,17 @@ int main()
 			{
 				cout << "             ";
 			}
-			cout << "|                               |           ";
+			cout << "  |                               |           ";
 			// Check/output player location for Garage
 			if (player1.playerPosition == 8)
 			{
-				cout << pchar[0] << " | *" << endl; // pchar 1st line
+				cout << pchar[0] << "          |*" << endl; // pchar 1st line
 			}
 			else
 			{
-				cout << "    | *" << endl;
+				cout << "             |*" << endl;
 			}
-			cout << " *"; // Insert 6th Key line
+			cout << " *  "; // Insert 6th Key line
 			if (player1.inventory[0] == "k")
 			{
 				cout << key[5];
@@ -208,15 +208,15 @@ int main()
 			{
 				cout << "             ";
 			}
-			cout << "|                               |           "; 
+			cout << "  |                               |           "; 
 			// Check/output player location for Garage
 			if (player1.playerPosition == 8)
 			{
-				cout << pchar[1] << " | *" << endl; // pchar 2nd line
+				cout << pchar[1] << "             |*" << endl; // pchar 2nd line
 			}
 			else
 			{
-				cout << "    | *" << endl;
+				cout << "             |*" << endl;
 			}
 			cout << " *  "; // Insert 1st phone line
 			if (player1.inventory[0] == "p")
@@ -227,15 +227,15 @@ int main()
 			{
 				cout << "             ";
 			}
-			cout << "|                              ||           ";
+			cout << "  |                              ||           ";
 			// Check/output player location for Garage
 			if (player1.playerPosition == 8)
 			{
-				cout << pchar[2] << "          |*" << endl; // pchar 3rd line
+				cout << pchar[2] << "             |*" << endl; // pchar 3rd line
 			}
 			else
 			{
-				cout << "    | *" << endl;
+				cout << "             |*" << endl;
 			}
 			cout << " *"; // Insert 2nd phone line
 			if (player1.inventory[0] == "p")
@@ -244,9 +244,9 @@ int main()
 			}
 			else
 			{
-				cout << "             ";
+				cout << "               ";
 			}
-			cout << "|  ____________________________|___| |___________________|*" << endl;
+			cout << "  |  ____________________________|___| |___________________|*" << endl;
 			cout << " *  "; // Insert 3rd phone line
 			if (player1.inventory[0] == "p")
 			{
@@ -256,7 +256,7 @@ int main()
 			{
 				cout << "             ";
 			}
-			cout << "| |\\    |  |  |  |  |  |     /|                          |*" << endl;
+			cout << "  | |\\    |  |  |  |  |  |     /|                          |*" << endl;
 			cout << " *  "; // Insert 4th phone line
 			if (player1.inventory[0] == "p")
 			{
@@ -266,7 +266,7 @@ int main()
 			{
 				cout << "             ";
 			}
-			cout << "| |  \\  |  |  |  |  |  |   /  |                          |*" << endl;
+			cout << "  | |  \\  |  |  |  |  |  |   /  |                          |*" << endl;
 			cout << " *  "; // Insert 5th phone line
 			if (player1.inventory[0] == "p")
 			{
@@ -276,7 +276,7 @@ int main()
 			{
 				cout << "             ";
 			}
-			cout << "| |___ \\|__|__|__|__|__  /    |        Kitchen           |*" << endl;
+			cout << "  | |___ \\|__|__|__|__|__  /    |        Kitchen           |*" << endl;
 			cout << " *  "; // Insert 6th phone line
 			if (player1.inventory[0] == "p")
 			{
@@ -286,7 +286,7 @@ int main()
 			{
 				cout << "             ";
 			}
-			cout << "| |     |              |______|                          |*" << endl;
+			cout << "  | |     |              |______|                          |*" << endl;
 			cout << " *  "; // Insert 1st clothes line
 			if (player1.inventory[0] == "s")
 			{
@@ -296,7 +296,7 @@ int main()
 			{
 				cout << "             ";
 			}
-			cout << "| |_____|              |      |           ";
+			cout << "  | |_____|              |      |           ";
 			// Check/output player location for Kitchen
 			if (player1.playerPosition == 7)
 			{
@@ -316,7 +316,7 @@ int main()
 			{
 				cout << "             ";
 			}
-			cout << "| |     |              |______|           ";
+			cout << "  | |     |              |______|           ";
 			// Check/output player location for Kitchen
 			if (player1.playerPosition == 7)
 			{
@@ -336,7 +336,7 @@ int main()
 			{
 				cout << "             ";
 			}
-			cout << "| |_____|              |   ^  |           ";
+			cout << "  | |_____|              |   ^  |           ";
 			// Check/output player location for Kitchen
 			if (player1.playerPosition == 7)
 			{
@@ -356,7 +356,7 @@ int main()
 				{
 					cout << "             ";
 				}
-			cout << "| |  |                     |                             |*" << endl;
+			cout << "  | |  |                     |                             |*" << endl;
 			cout << " *  "; // Insert 5th clothes line
 			if (player1.inventory[0] == "s")
 			{
@@ -366,7 +366,7 @@ int main()
 			{
 				cout << "             ";
 			}
-			cout << "| |  v                                                   |*" << endl;
+			cout << "  | |  v                                                   |*" << endl;
 			cout << " *  "; // Insert 6th clothes line
 			if (player1.inventory[0] == "s")
 			{
@@ -376,7 +376,7 @@ int main()
 			{
 				cout << "             ";
 			}
-			cout << "| |                                                      |*" << endl;
+			cout << "  | |                                                      |*" << endl;
 			cout << " *  "; // Insert 1st coffee line
 				if (player1.inventory[0] == "c")
 				{
@@ -386,7 +386,7 @@ int main()
 				{
 					cout << "             ";
 				}
-			cout << "| |                                                      |*" << endl;
+			cout << "  | |                                                      |*" << endl;
 			cout << " *  "; // Insert 2nd coffee line
 			if (player1.inventory[0] == "c")
 			{
@@ -396,7 +396,7 @@ int main()
 			{
 				cout << "             ";
 			}
-			cout << "| |                                       ________   ____|*" << endl;
+			cout << "  | |                                       ________   ____|*" << endl;
 			cout << " *  "; // Insert 3rd coffee line
 			if (player1.inventory[0] == "c")
 			{
@@ -406,7 +406,7 @@ int main()
 			{
 				cout << "             ";
 			}
-			cout << "| |                                      |        | |    |*" << endl;
+			cout << "  | |                                      |        | |    |*" << endl;
 			cout << " *  "; // Insert 4th coffee line
 			if (player1.inventory[0] == "c")
 			{
@@ -416,7 +416,7 @@ int main()
 			{
 				cout << "             ";
 			}
-			cout << "| |       Living Room                    | Bathroom      |*" << endl;
+			cout << "  | |       Living Room                    | Bathroom      |*" << endl;
 			cout << " *  "; // Insert 5th coffee line
 			if (player1.inventory[0] == "c")
 			{
@@ -426,7 +426,7 @@ int main()
 			{
 				cout << "             ";
 			}
-			cout << "| |                   ";
+			cout << "  | |                   ";
 			// Check/output player location for Livingroom
 			if (player1.playerPosition == 5)
 			{
@@ -434,16 +434,16 @@ int main()
 			}
 			else
 			{
-				cout << "                   |     " << endl;
+				cout << "                   |    " << endl;
 			}
 			// Check/output player location for Downstairs Bathroom
 			if (player1.playerPosition == 6)
 			{
-				cout << pchar[0] << "       |*" << endl; // pchar 1st line
+				cout << pchar[0] << "    |*" << endl; // pchar 1st line
 			}
 			else
 			{
-				cout << "          |*" << endl;
+				cout << "    |*" << endl;
 			}
 			
 			cout << " *  "; // Insert 6th coffee line
@@ -455,7 +455,7 @@ int main()
 			{
 				cout << "             ";
 			}
-			cout << "| |                   ";
+			cout << "  | |                   ";
 			// Check/output player location for Livingroom
 			if (player1.playerPosition == 5)
 			{
@@ -484,7 +484,7 @@ int main()
 			{
 				cout << "             ";
 			}
-			cout << "| |                   ";
+			cout << "  | |                   ";
 			// Check/output player location for Livingroom
 			if (player1.playerPosition == 5)
 			{
@@ -513,7 +513,7 @@ int main()
 			{
 				cout << "             ";
 			}
-			cout << "| |______________________________________|_______________|*" << endl;
+			cout << "  | |______________________________________|_______________|*" << endl;
 			cout << " *  "; // Insert 3rd wallet line
 			if (player1.inventory[0] == "w")
 			{
@@ -523,7 +523,7 @@ int main()
 			{
 				cout << "             ";
 			}
-			cout << "|                                                         *" << endl;
+			cout << "  |                                                         *" << endl;
 			cout << " *  "; // Insert 4th wallet line
 			if (player1.inventory[0] == "w")
 			{
@@ -533,7 +533,7 @@ int main()
 			{
 				cout << "             ";
 			}
-			cout << "|                                                         *" << endl;
+			cout << "  |                                                         *" << endl;
 			cout << " *  "; // Insert 5th wallet line
 			if (player1.inventory[0] == "w")
 			{
@@ -543,7 +543,7 @@ int main()
 			{
 				cout << "             ";
 			}
-			cout << "|                                                         *" << endl;
+			cout << "  |                                                         *" << endl;
 			cout << " *  "; // Insert 6th wallet line
 			if (player1.inventory[0] == "w")
 			{
@@ -553,7 +553,7 @@ int main()
 			{
 				cout << "             ";
 			}
-			cout << "|                                                         *" << endl;
+			cout << "  |                                                         *" << endl;
 			cout << " *****************************************************************************" << endl;
 			break;
 		case 2:
@@ -569,7 +569,7 @@ int main()
 			{
 				cout << "             ";
 			}
-			cout << "|  ______________________________________________________ *" << endl;
+			cout << "  |  ______________________________________________________ *" << endl;
 			cout << " *  "; // Insert item  2nd key line
 			if (player1.inventory[0] == "k")
 			{
@@ -579,7 +579,7 @@ int main()
 			{
 				cout << "             ";
 			}
-			cout << "| |\\    |  |  |  |     /     |                           |*" << endl;
+			cout << "  | |\\    |  |  |  |     /     |                           |*" << endl;
 			cout << " *  "; // Insert item  3rd key line
 			if (player1.inventory[0] == "k")
 			{
@@ -589,7 +589,7 @@ int main()
 			{
 				cout << "             ";
 			}
-			cout << "| |  \\  |  |  |  |   /  |    |           Weight          |*" << endl;
+			cout << "  | |  \\  |  |  |  |   /  |    |           Weight          |*" << endl;
 			cout << " *  "; // Insert item  4th key line
 			if (player1.inventory[0] == "k")
 			{
@@ -599,7 +599,7 @@ int main()
 			{
 				cout << "             ";
 			}
-			cout << "| |___ \\|__|__|__|_/    |    |             Room          |*" << endl;
+			cout << "  | |___ \\|__|__|__|_/    |    |             Room          |*" << endl;
 			cout << " *  "; // Insert item  5th key line
 			if (player1.inventory[0] == "k")
 			{
@@ -609,7 +609,7 @@ int main()
 			{
 				cout << "             ";
 			}
-			cout << "| |     |         |_____|    |        ";
+			cout << "  | |     |         |_____|    |        ";
 			// Check/output player location for Weight Room
 			if (player1.playerPosition == 3)
 			{
@@ -629,7 +629,7 @@ int main()
 			{
 				cout << "             ";
 			}
-			cout << "| |_____|         |     |    |        ";
+			cout << "  | |_____|         |     |    |        ";
 			// Check/output player location for Weight Room
 			if (player1.playerPosition == 3)
 			{
@@ -649,7 +649,7 @@ int main()
 			{
 				cout << "             ";
 			}
-			cout << "| |     |         |_____|    |        ";
+			cout << "  | |     |         |_____|    |        ";
 			// Check/output player location for Weight Room
 			if (player1.playerPosition == 3)
 			{
@@ -669,7 +669,7 @@ int main()
 			{
 				cout << "             ";
 			}
-			cout << "| |_____|         |  |  |    |                           |*" << endl;
+			cout << "  | |_____|         |  |  |    |                           |*" << endl;
 			cout << " *  "; // Insert 3rd phone line
 			if (player1.inventory[0] == "p")
 			{
@@ -679,7 +679,7 @@ int main()
 			{
 				cout << "             ";
 			}
-			cout << "| |     |            |       |                           |*" << endl;
+			cout << "  | |     |            |       |                           |*" << endl;
 			cout << " *  "; // Insert 4th phone line
 			if (player1.inventory[0] == "p")
 			{
@@ -689,7 +689,7 @@ int main()
 			{
 				cout << "             ";
 			}
-			cout << "| |_____|            V       |_______|  |________________|*" << endl;
+			cout << "  | |_____|            V       |_______|  |________________|*" << endl;
 			cout << " *  "; // Insert 5th phone line
 			if (player1.inventory[0] == "p")
 			{
@@ -699,7 +699,7 @@ int main()
 			{
 				cout << "             ";
 			}
-			cout << "| |  ^                                                   |*" << endl;
+			cout << "  | |  ^                                                   |*" << endl;
 			cout << " *  "; // Insert 6th phone line
 			if (player1.inventory[0] == "p")
 			{
@@ -709,7 +709,7 @@ int main()
 			{
 				cout << "             ";
 			}
-			cout << "| |  |                                                   |*" << endl;
+			cout << "  | |  |                                                   |*" << endl;
 			cout << " *  "; // Insert 1st clothes line
 			if (player1.inventory[0] == "s")
 			{
@@ -719,7 +719,7 @@ int main()
 			{
 				cout << "             ";
 			}
-			cout << "| |  |                    Hall    ";
+			cout << "  | |  |                    Hall    ";
 			// Check/output player location for Hall
 			if (player1.playerPosition == 4)
 			{
@@ -739,7 +739,7 @@ int main()
 			{
 				cout << "             ";
 			}
-			cout << "| |                               ";
+			cout << "  | |                               ";
 			// Check/output player location for Hall
 			if (player1.playerPosition == 4)
 			{
@@ -759,7 +759,7 @@ int main()
 			{
 				cout << "             ";
 			}
-			cout << "| |                               ";
+			cout << "  | |                               ";
 			// Check/output player location for Hall
 			if (player1.playerPosition == 4)
 			{
@@ -779,7 +779,7 @@ int main()
 			{
 				cout << "             ";
 			}
-			cout << "| |________________________   ___________________________|*" << endl;
+			cout << "  | |________________________   ___________________________|*" << endl;
 			cout << " *  "; // Insert 5th clothes line
 			if (player1.inventory[0] == "s")
 			{
@@ -789,7 +789,7 @@ int main()
 			{
 				cout << "             ";
 			}
-			cout << "| |                        | |      |                    |*" << endl;
+			cout << "  | |                        | |      |                    |*" << endl;
 			cout << " *  "; // Insert 6th clothes line
 			if (player1.inventory[0] == "s")
 			{
@@ -799,7 +799,7 @@ int main()
 			{
 				cout << "             ";
 			}
-			cout << "| |                                 |                    |*" << endl;
+			cout << "  | |                                 |                    |*" << endl;
 			cout << " *  "; // Insert 1st coffee line
 			if (player1.inventory[0] == "c")
 			{
@@ -809,7 +809,7 @@ int main()
 			{
 				cout << "             ";
 			}
-			cout << "| |    Bedroom                      |      Bathroom      |*" << endl;
+			cout << "  | |    Bedroom                      |      Bathroom      |*" << endl;
 			cout << " *  "; // Insert 2nd coffee line
 			if (player1.inventory[0] == "c")
 			{
@@ -819,7 +819,7 @@ int main()
 			{
 				cout << "             ";
 			}
-			cout << "| |               ";
+			cout << "  | |               ";
 			// Check/output player location for Bedroom
 			if (player1.playerPosition == 1)
 			{
@@ -839,7 +839,7 @@ int main()
 			{
 				cout << "             ";
 			}
-			cout << "| |               ";
+			cout << "  | |               ";
 			// Check/output player location for Bedroom
 			if (player1.playerPosition == 1)
 			{
@@ -868,7 +868,7 @@ int main()
 			{
 				cout << "             ";
 			}
-			cout << "| |               ";
+			cout << "  | |               ";
 			// Check/output player location for Bedroom
 			if (player1.playerPosition == 1)
 			{
@@ -897,7 +897,7 @@ int main()
 			{
 				cout << "             ";
 			}
-			cout << "| |                                 |   ";
+			cout << "  | |                                 |   ";
 			// Check/output player location for Upper Bathroom
 			if (player1.playerPosition == 2)
 			{
@@ -917,7 +917,7 @@ int main()
 			{
 				cout << "             ";
 			}
-			cout << "| |                                 =                    |*" << endl;
+			cout << "  | |                                 =                    |*" << endl;
 			cout << " *  "; // Insert 1st wallet line
 			if (player1.inventory[0] == "w")
 			{
@@ -927,7 +927,7 @@ int main()
 			{
 				cout << "             ";
 			}
-			cout << "| |                                 =                    |*" << endl;
+			cout << "  | |                                 =                    |*" << endl;
 			cout << " *  "; // Insert 2nd wallet line
 			if (player1.inventory[0] == "w")
 			{
@@ -937,7 +937,7 @@ int main()
 			{
 				cout << "             ";
 			}
-			cout << "| |_________________________________|____________________|*" << endl;
+			cout << "  | |_________________________________|____________________|*" << endl;
 			cout << " *  "; // Insert 3rd wallet line
 			if (player1.inventory[0] == "w")
 			{
@@ -947,7 +947,7 @@ int main()
 			{
 				cout << "             ";
 			}
-			cout << "|                                                         *" << endl;
+			cout << "  |                                                         *" << endl;
 			cout << " *  "; // Insert 4th wallet line
 			if (player1.inventory[0] == "w")
 			{
@@ -957,7 +957,7 @@ int main()
 			{
 				cout << "             ";
 			}
-			cout << "|                                                         *" << endl;
+			cout << "  |                                                         *" << endl;
 			cout << " *  "; // Insert 5th wallet line
 			if (player1.inventory[0] == "w")
 			{
@@ -967,7 +967,7 @@ int main()
 			{
 				cout << "             ";
 			}
-			cout << "|                                                         *" << endl;
+			cout << "  |                                                         *" << endl;
 			cout << " *  "; // Insert 6th wallet line
 			if (player1.inventory[0] == "w")
 			{
@@ -977,7 +977,7 @@ int main()
 			{
 				cout << "             ";
 			}
-			cout << "|                                                         *" << endl;
+			cout << "  |                                                         *" << endl;
 			cout << " *****************************************************************************" << endl;
 			
 			/*
