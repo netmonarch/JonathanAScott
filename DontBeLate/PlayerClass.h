@@ -3,7 +3,7 @@
 
 using namespace std;
 
-//#pragma once
+#pragma once
 
 // Player Class for Project, "Don't Be Late"
 
@@ -43,8 +43,8 @@ public:
 	Player(string &name) :playerName(name)
 	{
 		timer = 0;
-		floor = 1;
-		playerPosition = 8;
+		floor = 2;
+		playerPosition = 1;
 		for (int i = 0; i < 5; i++)
 			inventory[i] = "";
 	}
