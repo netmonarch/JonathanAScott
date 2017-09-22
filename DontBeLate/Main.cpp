@@ -105,7 +105,7 @@ int main()
 	vector<string> upHall = { "Exercise Room", "Downstairs", "Bedroom" };
 	vector<string> upBR = { "Bedroom" };
 	vector<string> exRoom = { "Hallway" };
-	vector<string> lvRoom = { "Bathroom", "Kitchen", "Upstairs" };
+	vector<string> lvRoom = { "D. Bathroom", "Kitchen", "Upstairs" };
 	vector<string> downBR = { "Living Room" };
 	vector<string> kitchen = { "Garage", "Living Room" };
 	vector<string> garage = { "Kitchen" };
@@ -1039,18 +1039,119 @@ int main()
 			}
 			break;//Add rest of rooms
 		case 3:
+			selection = ExerciseRoom.takeTurn();
+			if (checkInput(ExerciseRoom, selection) == true)
+			{
+				if (selection > ExerciseRoom.connectedRooms.size() && ExerciseRoom.item != "")
+				{
+					player1->inventory[0] = 'p';
+					ExerciseRoom.item = "";
+					player1->timer += 5;
+				}
+				else
+				{ 
+					player1->playerPosition = changeRoom(ExerciseRoom.connectedRooms[selection-1], *player1);
+					if (player1->playerPosition != 1)
+						player1->timer += 2;
+				}
+			}
 			break;
 		case 4:
+			selection = UpHallway.takeTurn();
+			if (checkInput(UpHallway, selection) == true)
+			{
+				
+				player1->playerPosition = changeRoom(UpHallway.connectedRooms[selection-1], *player1);
+				if (player1->playerPosition != 2)
+					player1->timer += 2;
+			}
 			break;
 		case 5:
+			selection = LivingRoom.takeTurn();
+			if (checkInput(LivingRoom, selection) == true)
+			{
+				if (selection > LivingRoom.connectedRooms.size() && LivingRoom.item != "")
+				{
+					player1->inventory[0] = 'w';
+					LivingRoom.item = "";
+					player1->timer += 5;
+				}
+				else
+				{ 
+					player1->playerPosition = changeRoom(LivingRoom.connectedRooms[selection-1], *player1);
+					if (player1->playerPosition != 1)
+						player1->timer += 2;
+				}
+			}
 			break;
 		case 6:
+			selection = DownBathroom.takeTurn();
+			if (checkInput(DownBathroom, selection) == true)
+			{
+				
+				player1->playerPosition = changeRoom(DownBathroom.connectedRooms[selection-1], *player1);
+				if (player1->playerPosition != 2)
+					player1->timer += 2;
+			}
 			break;
 		case 7:
+			selection = Kitchen.takeTurn();
+			if (checkInput(Kitchen, selection) == true)
+			{
+				if (selection > Kitchen.connectedRooms.size() && Kitchen.item != "")
+				{
+					player1->inventory[0] = 'c';
+					Kitchen.item = "";
+					player1->timer += 5;
+				}
+				else
+				{ 
+					player1->playerPosition = changeRoom(Kitchen.connectedRooms[selection-1], *player1);
+					if (player1->playerPosition != 1)
+						player1->timer += 2;
+				}
+			}
 			break;
 		case 8:
+			selection = Garage.takeTurn();
+			if (checkInput(Garage, selection) == true)
+			{
+				if (selection > Garage.connectedRooms.size() && Garage.item != "")
+				{
+					player1->inventory[0] = 'k';
+					Garage.item = "";
+					player1->timer += 5;
+				}
+				else
+				{ 
+					player1->playerPosition = changeRoom(Garage.connectedRooms[selection-1], *player1);
+					if (player1->playerPosition != 1)
+						player1->timer += 2;
+				}
+			}
 			break;
+/*
 
+	//Declaring variables for connected rooms
+	vector<string> bdroom = { "Bathroom", "Hallway" };
+	vector<string> upHall = { "Exercise Room", "Downstairs", "Bedroom" };
+	vector<string> upBR = { "Bedroom" };
+	vector<string> exRoom = { "Hallway" };
+	vector<string> lvRoom = { "D. Bathroom", "Kitchen", "Upstairs" };
+	vector<string> downBR = { "Living Room" };
+	vector<string> kitchen = { "Garage", "Living Room" };
+	vector<string> garage = { "Kitchen" };
+
+	//Creates Rooms
+	Room Bedroom(roomList[1], "Clothes", bdroom);
+	Room UpBathroom(roomList[2], "", upBR);
+	Room ExerciseRoom(roomList[3], "Phone", exRoom);
+	Room UpHallway(roomList[4], "", upHall);
+	Room LivingRoom(roomList[5], "Wallet", lvRoom);
+	Room DownBathroom(roomList[6], "", downBR);
+	Room Kitchen(roomList[7], "Coffe", kitchen);
+	Room Garage(roomList[8], "Keys", garage);
+*/
 		}
 	} while (player1->timer < 60);
 	return 0;
@@ -1086,6 +1187,29 @@ int changeRoom(string room, Player person)
 	{
 		return 2;
 	}
-	else if ()//Add Rest of rooms
+	else if (room.compare("Exercise Room") == 0)
+	{
+		return 3;
+	}
+	else if (room.compare("Upstairs") == 0)
+	{
+		return 4;
+	}
+	else if (room.compare("Living Room") == 0)
+	{
+		return 5;
+	}
+	else if (room.compare("D. Bathroom") == 0)
+	{
+		return 6;
+	}
+	else if (room.compare("Kitchen") == 0)
+	{
+		return 7;
+	}
+	else if (room.compare("Garage") == 0)
+	{
+		return 8;
+	}
 	return 0;
 }
