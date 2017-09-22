@@ -548,13 +548,13 @@ int main()
 			}
 			cout << "  |                   ";
 			// Display timer
-			if (player1.timer >= 10)
+			if (player1->timer >= 10)
 			{
-				cout << "Time gone by: " << player1.timer << " minutes              *" << endl;
+				cout << "Time gone by: " << player1->timer << " minutes              *" << endl;
 			}
 			else
 			{
-				cout << "Time gone by: " << player1.timer << " minutes               *" << endl;
+				cout << "Time gone by: " << player1->timer << " minutes               *" << endl;
 			}
 				
 			cout << " *  "; // Insert 6th wallet line
@@ -982,13 +982,13 @@ int main()
 			}
 			cout << "  |                   ";
 			// Display timer
-			if (player1.timer >= 10)
+			if (player1->timer >= 10)
 			{
-				cout << "Time gone by: " << player1.timer << " minutes              *" << endl;
+				cout << "Time gone by: " << player1->timer << " minutes              *" << endl;
 			}
 			else
 			{
-				cout << "Time gone by: " << player1.timer << " minutes               *" << endl;
+				cout << "Time gone by: " << player1->timer << " minutes               *" << endl;
 			}
 			cout << " *  "; // Insert 6th wallet line
 			if (player1->inventory[0] == "w")
