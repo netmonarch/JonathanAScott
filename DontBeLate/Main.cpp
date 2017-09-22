@@ -1154,6 +1154,13 @@ int main()
 */
 		}
 	} while (player1->timer < 60);
+	
+	if (player1->timer > 60)
+	{
+		cout "Game over! You ran out of time!";
+		system("pause");
+	}
+	
 	return 0;
 }
 
