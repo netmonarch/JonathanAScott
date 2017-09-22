@@ -8,7 +8,7 @@
 using namespace std;
 
 bool checkInput(Room, int);
-void changeRoom(string, Player);
+int changeRoom(string, Player);
 
 #pragma once
 
@@ -1014,8 +1014,6 @@ int main()
 			selection = Bedroom.takeTurn();
 			if (checkInput(Bedroom, selection) == true)
 			{
-				cout << selection;
-				system("PAUSE");
 				if (selection > Bedroom.connectedRooms.size() && Bedroom.item != "")
 				{
 					player1->inventory[0] = 's';
@@ -1023,12 +1021,10 @@ int main()
 					player1->timer += 5;
 				}
 				else
-				{
-					//player1->playerPosition = 
-					changeRoom(Bedroom.connectedRooms[selection-1], *player1);
-					cout << "POS:" <<player1->playerPosition;
-					cout << "Timer: " <<player1->timer;
-					system("PAUSE");
+				{ 
+					player1->playerPosition = changeRoom(Bedroom.connectedRooms[selection-1], *player1);
+					if (player1->playerPosition != 1)
+						player1->timer += 2;
 				}
 			}
 			break;
@@ -1037,9 +1033,11 @@ int main()
 			if (checkInput(UpBathroom, selection) == true)
 			{
 				
-				changeRoom(UpBathroom.connectedRooms[selection-1], *player1);
+				player1->playerPosition = changeRoom(UpBathroom.connectedRooms[selection-1], *player1);
+				if (player1->playerPosition != 2)
+					player1->timer += 2;
 			}
-			break;
+			break;//Add rest of rooms
 		case 3:
 			break;
 		case 4:
@@ -1078,20 +1076,16 @@ bool checkInput(Room current, int selection)
 	}
 }
 
-void changeRoom(string room, Player person)
+int changeRoom(string room, Player person)
 { 
-	cout << room << "ROOM" << endl;
-	system("PAUSE");
 	if (room.compare("Bedroom") == 0)
 	{
-		person.playerPosition = 1;
-		person.timer += 2;
+		return 1;
 	}
 	else if (room.compare("Bathroom") == 0)
 	{
-		cout << "BR" << endl;
-		system("PAUSE");
-		person.playerPosition = 2;
-		person.timer += 2;
+		return 2;
 	}
+	else if ()//Add Rest of rooms
+	return 0;
 }
