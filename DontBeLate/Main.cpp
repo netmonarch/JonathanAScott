@@ -1130,34 +1130,13 @@ int main()
 				}
 			}
 			break;
-/*
 
-	//Declaring variables for connected rooms
-	vector<string> bdroom = { "Bathroom", "Hallway" };
-	vector<string> upHall = { "Exercise Room", "Downstairs", "Bedroom" };
-	vector<string> upBR = { "Bedroom" };
-	vector<string> exRoom = { "Hallway" };
-	vector<string> lvRoom = { "D. Bathroom", "Kitchen", "Upstairs" };
-	vector<string> downBR = { "Living Room" };
-	vector<string> kitchen = { "Garage", "Living Room" };
-	vector<string> garage = { "Kitchen" };
-
-	//Creates Rooms
-	Room Bedroom(roomList[1], "Clothes", bdroom);
-	Room UpBathroom(roomList[2], "", upBR);
-	Room ExerciseRoom(roomList[3], "Phone", exRoom);
-	Room UpHallway(roomList[4], "", upHall);
-	Room LivingRoom(roomList[5], "Wallet", lvRoom);
-	Room DownBathroom(roomList[6], "", downBR);
-	Room Kitchen(roomList[7], "Coffe", kitchen);
-	Room Garage(roomList[8], "Keys", garage);
-*/
 		}
 	} while (player1->timer < 60);
 	
 	if (player1->timer > 60)
 	{
-		cout "Game over! You ran out of time!";
+		cout << "Game over! You ran out of time!";
 		system("pause");
 	}
 	
