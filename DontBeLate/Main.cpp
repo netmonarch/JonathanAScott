@@ -111,7 +111,7 @@ int main()
 	vector<string> garage = { "Kitchen" };
 
 	//Creates Rooms
-	Room Bedroom(roomList[1], "Cloths", bdroom);
+	Room Bedroom(roomList[1], "Clothes", bdroom);
 	Room UpBathroom(roomList[2], "", upBR);
 	Room ExerciseRoom(roomList[3], "Phone", exRoom);
 	Room UpHallway(roomList[4], "", upHall);
@@ -124,7 +124,7 @@ int main()
 
 	//Creates Player
 	system("cls");
-	cout << "Don't Be Late/n" << endl;
+	cout << "Don't Be Late\n" << endl;
 	cout << "Enter a name for your player: ";
 	string pName;
 	getline(cin, pName);
@@ -546,7 +546,17 @@ int main()
 			{
 				cout << "             ";
 			}
-			cout << "  |                                                         *" << endl;
+			cout << "  |                   ";
+			// Display timer
+			if (player1.timer >= 10)
+			{
+				cout << "Time gone by: " << player1.timer << " minutes              *" << endl;
+			}
+			else
+			{
+				cout << "Time gone by: " << player1.timer << " minutes               *" << endl;
+			}
+				
 			cout << " *  "; // Insert 6th wallet line
 			if (player1->inventory[0] == "w")
 			{
@@ -970,11 +980,20 @@ int main()
 			{
 				cout << "             ";
 			}
-			cout << "  |                                                         *" << endl;
+			cout << "  |                   ";
+			// Display timer
+			if (player1.timer >= 10)
+			{
+				cout << "Time gone by: " << player1.timer << " minutes              *" << endl;
+			}
+			else
+			{
+				cout << "Time gone by: " << player1.timer << " minutes               *" << endl;
+			}
 			cout << " *  "; // Insert 6th wallet line
 			if (player1->inventory[0] == "w")
 			{
-				cout << wallet[6];
+				cout << wallet[5];
 			}
 			else
 			{
